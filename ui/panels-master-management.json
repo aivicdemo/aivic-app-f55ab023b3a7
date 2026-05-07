@@ -1,0 +1,120 @@
+{
+  "systemId": "master-management",
+  "systemName": "マスタ管理",
+  "cssTheme": null,
+  "screens": [
+    {
+      "id": "master-sys-1778161723640",
+      "name": "研究機器マスタ管理",
+      "purpose": "研究機器の基本情報を管理するマスタテーブル",
+      "items": [
+        "研究機器マスタ一覧（検索・絞り込み）",
+        "[新規登録ボタン]→新規登録モーダル",
+        "[行クリック]→詳細・編集モーダル",
+        "[削除ボタン]→確認後削除",
+        "CSV インポート / エクスポート"
+      ]
+    }
+  ],
+  "screenPanels": [
+    {
+      "screenId": "master-sys-1778161723640",
+      "panelHtml": "<h2 style=\"margin:0 0 12px\">研究機器マスタ管理</h2>\n<p class=\"muted\">研究機器の基本情報を管理するマスタテーブル</p>\n<ul style=\"padding-left:18px\"><li>研究機器マスタ一覧（検索・絞り込み）</li><li>[新規登録ボタン]→新規登録モーダル</li><li>[行クリック]→詳細・編集モーダル</li><li>[削除ボタン]→確認後削除</li><li>CSV インポート / エクスポート</li></ul>",
+      "initJs": "function(container, apiUrl, tables) {}",
+      "method": "template"
+    }
+  ],
+  "tableDefinitions": [
+    {
+      "tableName": "研究機器マスタ",
+      "purpose": "研究機器の基本情報を管理するマスタテーブル",
+      "columns": [
+        {
+          "name": "機器ID",
+          "type": "uuid",
+          "required": true,
+          "description": "研究機器の一意識別子"
+        },
+        {
+          "name": "機器名",
+          "type": "varchar(100)",
+          "required": true,
+          "description": "研究機器の名称"
+        },
+        {
+          "name": "機器説明",
+          "type": "text",
+          "required": false,
+          "description": "機器の詳細説明や仕様"
+        },
+        {
+          "name": "設置場所",
+          "type": "varchar(100)",
+          "required": true,
+          "description": "機器が設置されている場所"
+        },
+        {
+          "name": "導入時期",
+          "type": "date",
+          "required": false,
+          "description": "機器の導入日"
+        },
+        {
+          "name": "メーカー",
+          "type": "varchar(100)",
+          "required": false,
+          "description": "機器のメーカー名"
+        },
+        {
+          "name": "管理者",
+          "type": "varchar(100)",
+          "required": false,
+          "description": "機器の管理責任者"
+        },
+        {
+          "name": "利用可能フラグ",
+          "type": "boolean",
+          "required": true,
+          "description": "機器が予約可能かどうかの状態"
+        },
+        {
+          "name": "写真1",
+          "type": "varchar(255)",
+          "required": false,
+          "description": "機器の写真1のファイルパス"
+        },
+        {
+          "name": "写真2",
+          "type": "varchar(255)",
+          "required": false,
+          "description": "機器の写真2のファイルパス"
+        },
+        {
+          "name": "写真3",
+          "type": "varchar(255)",
+          "required": false,
+          "description": "機器の写真3のファイルパス"
+        },
+        {
+          "name": "写真4",
+          "type": "varchar(255)",
+          "required": false,
+          "description": "機器の写真4のファイルパス"
+        },
+        {
+          "name": "写真5",
+          "type": "varchar(255)",
+          "required": false,
+          "description": "機器の写真5のファイルパス"
+        },
+        {
+          "name": "登録日時",
+          "type": "timestamp",
+          "required": true,
+          "description": "機器情報の登録日時"
+        }
+      ]
+    }
+  ],
+  "presetSeedData": {}
+}
